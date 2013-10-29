@@ -1,0 +1,30 @@
+emcc  -Os -Wno-warn-absolute-paths  -I"/home/tshort/openmodelica/build/include/omc" -I. -L"/home/tshort/openmodelica/build/lib/omlibrary/Modelica 3.2.1/Electrical/Analog/Examples"  -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica.Electrical.Analog.Examples.Rectifier.o Modelica.Electrical.Analog.Examples.Rectifier.c
+emcc  -Os -Wno-warn-absolute-paths  -I"/home/tshort/openmodelica/build/include/omc" -I. -L"/home/tshort/openmodelica/build/lib/omlibrary/Modelica 3.2.1/Electrical/Analog/Examples"  -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica.Electrical.Analog.Examples.Rectifier_records.o Modelica.Electrical.Analog.Examples.Rectifier_records.c
+emcc -I. -o Modelica.Electrical.Analog.Examples.Rectifier.js Modelica.Electrical.Analog.Examples.Rectifier.o Modelica.Electrical.Analog.Examples.Rectifier_records.o -I"/home/tshort/openmodelica/build/include/omc" -I. -L"/home/tshort/openmodelica/build/lib/omlibrary/Modelica 3.2.1/Electrical/Analog/Examples"  -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -L"/home/tshort/openmodelica/build/lib/omlibrary/Modelica 3.2.1/Electrical/Analog/Examples"    -Os -Wno-warn-absolute-paths  -L'/home/tshort/openmodelica/build/lib/omc/emcc' -lblas -llapack -lexpat -lSimulationRuntimeC -lf2c -s TOTAL_MEMORY=536870912 -s MAX_SETJMPS=20000 -s OUTLINING_LIMIT=20000 --pre-js /home/tshort/openmodelica/build/lib/omc/emcc/pre.js
+Warning: Casting a function pointer type to a potentially incompatible one (use -s VERBOSE=1 to see more)
+Warning: See https://github.com/kripken/emscripten/wiki/CodeGuidelinesAndLimitations#function-pointer-issues for more information on dangerous function pointer casts
+Warning: Incompatible function pointer casts are very dangerous with ASM_JS=1, you should investigate and correct these
+warning: Output contains some very large functions, consider using OUTLINING_LIMIT to break them up (see settings.js)
+
+
+
+
+
+
+
+
+
+
+trying to reduce the size of _read_input_xml which is 61944 (>=? 20000), aim for 15486
+performed outline _read_input_xml,_read_input_xml$0,pre size,15571,resulting size,19275,overhead (w/r):,2,224, owned: ,264, left: ,1145,2, loopsDepth: ,0
+trying to reduce the size of _read_input_xml which is 48727 (>=? 20000), aim for 16242
+performed outline _read_input_xml,_read_input_xml$1,pre size,17566,resulting size,21877,overhead (w/r):,2,262, owned: ,305, left: ,841,2, loopsDepth: ,0
+trying to reduce the size of _read_input_xml which is 33831 (>=? 20000), aim for 16916
+
+
+performed outline _read_input_xml,_read_input_xml$2,pre size,16916,resulting size,30839,overhead (w/r):,549,49, owned: ,61, left: ,781,2, loopsDepth: ,0
+trying to reduce the size of _read_input_xml which is 29459 (>=? 20000), aim for 14730
+performed outline _read_input_xml,_read_input_xml$3,pre size,27277,resulting size,29026,overhead (w/r):,0,13, owned: ,770, left: ,12,2, loopsDepth: ,0
+  no point in trying to reduce the size of _read_input_xml which is 2402 <= 20000
+... resulting sizes of _read_input_xml is 19277,21879,30841,29028,2402
+
